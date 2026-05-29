@@ -1,36 +1,45 @@
-Weather Forecast App 🌦️ 
+Brian’s Weather Forecast ☀️ 🌧️ :
 
-Overview: 
-A dynamic weather forecasting application built with React that fetches real-time data from the OpenWeatherMap API. 
+Overview:
+A dynamic weather forecasting mobile application built with React Native (Expo), designed for Android/iOS; and powered by the OpenWeatherMap API. 
 
-Features: 
+Features:
+Search weather by city OR use the current location
+Current weather conditions of the selected city
+5-day forecast for the selected city
+3-hour forecast for same day for the selected city
+Temperature unit toggle (°C / °F) and language selection toggle(EN / FR)
+Error handling for invalid input
+Responsive UI design with a background animation related to forecasted weather(if sunny / rainy / snowy..)
 
-Search weather by city a drop-down result with country flag emoji OR use the current location 
+Highlights:
+The mobile app is located in the `mobile` folder and includes the followings:
+    Navigation/routing:Implemented using React Navigation (bottom tab navigation)
+	Tabs: `Weather` and `Saved Cities`
+	Hooks usage:Uses React hooks (`useState`, `useEffect`, `useMemo`, `useCallback`) and a custom hook (`useWeather`)
+	Storage technique:Uses AsyncStorage to persist:User settings (temperature unit/language)//Recent searched cities
+	Location-specific feature:Integrates device geolocation with `expo-location`//
+	Users can fetch weather for their current location
 
-Current weather conditions and current time of the selected city 
+Installation:
 
-5-day forecast and 3-hour forecast for selected day 
-
-Temperature unit toggle (°C / °F) and language selection toggle(EN / FR) 
-
-Email button to receive the viewed forecast 
-
-Error handling for invalid input 
-
-Responsive UI design with a background animation related to forecasted weather(if sunny / rainy / snowy..) 
-
-Installation: 
-
-Clone the repository: 
+```bash
 
 git clone https://github.com/brianchehab-stack/weathermobile.git 
+cd mobile 
+npm install 
 
-Install dependencies:npm install 
+```
+Create `mobile/.env`:
 
-Add your API key by creating a .env file and add: REACT_APP_WEATHER_API_KEY=your_api_key 
+```env
+EXPO_PUBLIC_WEATHER_API_KEY=your_api_key 
+```
+Run:
 
-Run the app: npm start 
+```bash 
+npm start 
 
- 
-
-Brian 
+``` 
+Then open in:
+- Expo Go on Android/iOS, or Android/iOS emulator
