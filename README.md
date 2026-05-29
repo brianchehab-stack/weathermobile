@@ -23,7 +23,7 @@ Installation:
 
 Clone the repository: 
 
-git clone https://github.com/brianchehab-stack/weatherappv1.1.git 
+git clone https://github.com/brianchehab-stack/weathermobile.git 
 
 Install dependencies:npm install 
 
