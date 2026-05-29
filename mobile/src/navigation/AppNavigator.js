@@ -8,6 +8,7 @@ const Tab = createBottomTabNavigator();
 
 export default function AppNavigator() {
   const [language, setLanguage] = useState('en');
+  const mainPageLabel = language === 'fr' ? 'Page principale' : 'Main Page';
   const savedCitiesLabel = language === 'fr' ? 'Recherches recentes' : 'Recent Searches';
 
   useEffect(() => {
@@ -44,7 +45,12 @@ export default function AppNavigator() {
         tabBarInactiveTintColor: '#94A3B8'
       }}
     >
-      <Tab.Screen name="Weather" component={WeatherScreen} options={{ title: "Main Page" }} />
+      <Tab.Screen
+        key={`weather-${language}`}
+        name="Weather"
+        component={WeatherScreen}
+        options={() => ({ tabBarLabel: mainPageLabel })}
+      />
       <Tab.Screen
         key={`saved-cities-${language}`}
         name="Saved Cities"

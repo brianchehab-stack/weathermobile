@@ -175,7 +175,7 @@ export default function WeatherScreen() {
 
   useEffect(() => {
     navigation.setOptions({
-      title: isFrench ? 'Page Principale' : 'Main Page'
+      headerTitle: isFrench ? 'Prévisions Météo de Brian' : 'Brian\'s Weather Forecast App'
     });
   }, [navigation, isFrench]);
 
