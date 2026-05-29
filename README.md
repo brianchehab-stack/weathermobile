@@ -38,8 +38,7 @@ EXPO_PUBLIC_WEATHER_API_KEY=your_api_key
 Run:
 
 ```bash 
-npm start 
-
+npx expo start --tunnel
 ``` 
 Then open in:
 - Expo Go on Android/iOS, or Android/iOS emulator
